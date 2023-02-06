@@ -1,0 +1,4 @@
+docker run package_name
+    to Install a docker image
+docker ps -a 
+    To list all the docker files
