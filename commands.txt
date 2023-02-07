@@ -2,3 +2,25 @@ docker run package_name
     to Install a docker image
 docker ps -a 
     To list all the docker files
+docker run -it package_name
+    To run a docker image in a interactive mode
+
+
+
+
+CREATE A DOCKER FROM USER DEFINE image
+
+FROM node(BASE IMAGE)
+
+WORKDIR /app
+    to run all the commands on the location
+
+COPY . /app
+    . all the folder and sub folders in the base project
+    /app is used to save the docker container
+RUN commands
+    to run the commands on the container
+
+CMD commands
+    this will run only when the container is used
+
