@@ -24,3 +24,46 @@ RUN commands
 CMD commands
     this will run only when the container is used
 
+DOCKER PS commands
+    -a, --all             Show all containers (default shows just running)
+    -f, --filter filter   Filter output based on conditions provided
+        --format string   Pretty-print containers using a Go template
+    -n, --last int        Show n last created containers (includes all states) (default -1)
+    -l, --latest          Show the latest created container (includes all states)
+        --no-trunc        Don't truncate output
+    -q, --quiet           Only display container IDs
+    -s, --size            Display total file sizes
+
+
+docker start id/name 
+    it does not block the terminal for logs like docker run command
+
+    it is because it runs on foreground and docker start runs on background
+    docker start(background)(detach Mode) docker run(foreground)(attached mode)
+
+    docker start id === docker run -p 8000:80 -d id 
+    which is used in detach mode
+
+docker start -a id 
+    to restart a container on attached mode
+
+docker attach id 
+    is used to run the container in interactive log shoing container 
+
+    docker run -p 8000:80 id === docer attach id
+
+docker logs ID
+
+    used to print the logs of the container running in either attached r detached mode
+
+docker logs -f id
+     to see upcomming logs like as in attached mode
+
+
+
+REMOVE THE CONATINER AND IMAGES
+
+docker rm container_id
+    to remove the containers
+docker rmi id 
+    to remove the images
